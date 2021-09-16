@@ -1,0 +1,269 @@
+/* Global */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+body {
+    background-color: var(--light);
+
+}
+
+/* misc styling */
+.underline {
+    text-decoration: underline;
+}
+
+.soft {
+    color: rgb(70, 70, 70);
+    font-style: italic;
+}
+
+/* Color variables for styling page */
+:root{
+    --super-light: #f3fceb;
+    --light: #E4EDDB;
+    --dark-light: #a5ac9e;
+    --medium: #307672;
+    --dark: #144D53;
+    --super-dark: #1A3C40;
+
+}
+
+/* Header code */
+#main-header nav {
+    z-index: 0;
+    background-color: var(--super-dark);
+    height: 65px;
+}
+
+#main-header nav *{
+    color: var(--light);
+}
+#main-header nav h1{
+    padding: 15px 10px;
+    margin-left: 40px;
+}
+
+#main-header nav h1 .accent {
+    color: var(--dark-light);
+    transition: 0.5s;
+}
+
+#main-header nav h1:hover > .accent {
+    color: var(--light);
+    transition: 1s;
+}
+
+#main-header nav ul{
+    list-style: none;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin-right: 80px;
+
+}
+
+#main-header nav ul li{
+    display: inline;
+
+}
+#main-header nav a{
+    margin: auto;
+    text-align: center;
+    width: 150px;
+    padding: 22px 10px;
+    display: inline-block;
+    height: 65px;
+    transition: 0.5s;
+    background-color: var(--super-dark);
+
+}
+
+
+#main-header nav a:hover {
+    background-color: var(--medium);
+    border-bottom: olive solid 3px;
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+.header-img {
+    z-index: -4;
+    position: absolute;
+    width: 100%;
+    height: 33%;
+
+}
+
+/* Fun gradient to make header image more dramatic */
+.gradient {
+    z-index: -3;
+    position: absolute;
+    width: 100%;
+    height: 33%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.3) 100%); /* W3C */
+
+}
+
+/* Wrapper to outline image for positioning */
+.profile-img-wrapper {
+    position: absolute;
+    margin-left: 10%;
+    border-radius: 50%;
+    top: 25%;
+
+}
+
+.profile-img-wrapper img {
+    height: 35vh;
+    min-height: 170px;
+    max-height: 250px;
+    background-color: var(--light);
+    padding: 10px;
+    border-radius: 50%;
+
+}
+
+/* About me section */
+#about-me {
+    font-size: 1.75em;
+    position: relative;
+    top: 45vh;
+    margin: 10vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    padding: 5vh;
+    border: 1px solid var(--dark-light);
+    border-radius: 5px;
+    background-color: var(--super-light);
+    box-shadow: 7px 7px 10px var(--dark);
+}
+
+/* My work section  */
+#my-work { /* Flex container */
+    font-size: 1.75em;
+    position: relative;
+    top: 42vh;
+    margin: 7vh;
+    margin-top: 0;
+    padding: 3vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+/* Title text */
+.my-work-title{
+    font-size: 2.5em;
+    position: relative;
+    top: 42vh;
+    margin-left: 12vh;
+    display: block;
+}
+
+/* Cards for projects (flex elements) */
+#my-work div {
+    padding: 5%;
+    margin-bottom: 3vh;
+    justify-content: flex-start;
+    border: 1px solid var(--dark-light);
+    border-radius: 5px;
+    background-color: var(--super-light);
+    box-shadow: 7px 7px 10px var(--dark);
+    flex-basis: 45%;
+    margin-right: 5%;
+    
+}
+
+/* Larger card */
+.large-div {
+    flex-basis: 100% !important;
+}
+
+#my-work div img {
+    width: 100%;
+    filter: grayscale(70%);
+    box-shadow: 7px 7px 10px var(--dark);
+    transition: 0.5s;
+    border-radius: 4px;
+
+}
+
+#my-work div header {
+    font-size: larger;
+}
+
+#my-work div a {
+    border-bottom: 2px solid var(--super-dark);
+    color: var(--super-dark);
+}
+
+#my-work div a:hover {
+    color: var(--medium);
+}
+
+
+#my-work div:hover > a img {
+    filter: grayscale(0%);
+    box-shadow: 7px 7px 10px var(--light);
+    transition: 2s;
+}
+
+/* Contact styling */
+#contact {
+    text-align: center;
+    display: inline;
+    position: relative;
+    margin: auto;
+}
+
+/* Adjust elements based on screen size */
+@media screen and (max-width: 776px) {
+    #main-header nav a{
+        display: block;
+        width: 100%;
+
+    }
+    #main-header nav ul{
+        display: block;
+        width: 100%;
+        margin-right: 0px;
+
+    }
+    .profile-img-wrapper {
+        display: block;
+        width: 100%;
+        margin: auto !important;
+
+    }
+    .profile-img-wrapper img{
+        display: block;
+        margin-left: auto;
+        position: relative;
+        margin: auto;
+        top: 205px;
+    }
+    .header-img {
+        top: 195px;
+        height: 25%;
+
+    }
+    .gradient {
+        top: 195px;
+        height: 33%;
+    }
+    #about-me, #my-work {
+        margin-top: 40vh !important;
+        font-size: 1em !important;
+    }
+
+    #my-work {
+        top:0 !important;
+    }
+
+}
