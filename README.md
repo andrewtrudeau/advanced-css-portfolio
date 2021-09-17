@@ -12,11 +12,11 @@ I used the given example to make my own version of a profile/portfolio page. I f
 
 Header (desktop)
 
-![Horizontal view](./assets/images/screenshots/first-large.jpg)
+![Horizontal view](./Assets/images/screenshots/first-large.jpg)
 
 Resized (phone screen)
 
-![Smaller, resized view](./assets/images/screenshots/second-small.png)
+![Smaller, resized view](./Assets/images/screenshots/second-small.png)
 
 ## Links
 
